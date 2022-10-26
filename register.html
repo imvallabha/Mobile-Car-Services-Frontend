@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FixKar - Register</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <body>
+        
+        <div class="back2">
+
+            <nav class="nav-bar2">
+                <img class="logo" src="Assets/logo.png">
+                <nav class="sidebar">
+                    <div class="text">Services</div>
+                    <ul>
+                        <li>
+                            <a href="#" class="fix-btn">Quick Fix 
+                                <span class="fas fa-caret-down first"></span>
+                            </a>
+                            <ul class="fix-show">
+                                <li><a href="#">Puncture Repair</a></li>
+                                <li><a href="#">Engine Diagnosis</a></li>
+                                <li><a href="#">Battery Fix</a></li>
+                                <li><a href="#">Plug system Repair</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Car Exchange</a></li>
+                        <li><a href="#">Towing</a></li>
+                    </ul>
+                </nav>
+            </nav>
+            <div class="container">
+                <form action="Billing.html" method="post">
+                    <h2>Register Service - <span id="place"></span></h2>
+                    <div class="content">
+                        <div class="input-box">
+                            <label for="name">Full Name</label>
+                            <input type="text" placeholder="Enter full name" name="name" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Enter your valid email address" name="email" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="contact-number">Contact Number</label>
+                            <input type="tel" placeholder="Enter phone number" title="Enter Valid Phone Number" name="contact-number" pattern="[1-9]{1}[0-9]{9}" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="location">Current Location</label>
+                            <input type="text" placeholder="Enter your Current Location" name="location" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="car-name">Car Name</label>
+                            <input type="text" placeholder="Enter car name" name="car-name" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="issue">Issue</label>
+                            <input type="text" placeholder="Enter your car issue" name="issue" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="details">More Details</label>
+                            <input type="text" placeholder="Enter details about issue" name="details">
+                        </div>
+                        <span class="emergency-service">Select Emergency Services</span>
+                        <div class="service-category">
+                            <input type="radio" name="service" id="car-exchange">
+                            <label for="service">Car Exchange</label>
+                            <input type="radio" name="service" id="towing">
+                            <label for="service">Towing</label>
+                            <input type="radio" name="service" id="no">
+                            <label for="service">Not Required</label>
+                        </div>
+                    </div>
+                    <div class="alert">
+                        <p>By clicking submit, you agree to our <a href="#">Terms</a> and <a href="#">privacy policy.</a>
+                            General charges will be applied on this service.</p>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" >Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            $('.fix-btn').click(function() {
+                $('nav ul .fix-show').toggleClass("show");
+                $('nav ul .first').toggleClass("rotate");
+            });
+
+            var CityName = localStorage.getItem('city-name');
+            document.getElementById("place").innerHTML = CityName;
+        </script>
+        
+    </body>
+</html>

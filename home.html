@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FixKar - Home</title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+    </head>
+
+    <body>
+        
+        <div class="back">
+
+            <nav class="nav-bar">
+                <img class="logo" src="Assets/logo.png">
+                <ul>
+                    <li><a class="active" href="home.html">Home</a></li>
+                    <li><a href="#" id="info">Services</a></li>
+                    <li><a href="#" id="contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="location">
+
+                <img class="image1" src="Assets/location.png">
+                <form action="register.html" >
+                    <div class="dropdown">
+                    <!--<h2>Location</h2>-->
+    
+                    <div class="select-box">
+                        <div class="selected">
+                            Select your city
+                        </div>
+                        <div class="options-container">
+                            
+                            <div class="option">
+                                <input type="radio" class="radio" value="Banglore" name="category">
+                                <label for="City">Banglore</label>
+                            </div>
+                             
+                            <div class="option">
+                                <input type="radio" class="radio" value="Delhi" name="category">
+                                <label for="City">Delhi</label>
+                            </div>
+                             
+                            <div class="option">
+                                <input type="radio" class="radio" value="Mumbai" name="category">
+                                <label for="City">Mumbai</label>
+                            </div>
+                             
+                            <div class="option">
+                                <input type="radio" class="radio" value="Kolkata" name="category">
+                                <label for="City">Kolkata</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div> 
+                    <button class="btn" type="submit" onclick="radioValue()">Go</button>
+                </form>
+            </div>
+            
+            
+        </div>
+        
+        <script src="main.js">
+</script>  
+    </body>
+</html>

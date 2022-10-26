@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FixKar - Billing</title>
+        <link rel="stylesheet" type="text/css" href="style3.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    </head>
+    <body class="back">
+        <div class="invoice-box">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="top">
+                    <td colspan="2">
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <img class="logo" src="Assets/logo.png">
+                                    <h2>FixKar - Billing Invoice</h2>
+                                </td>
+                                <td>
+                                    Invoice #: 172 <br>
+                                    created: <span id='date-time'></span>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr class="information">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td>
+                                    Contact: +918618883209<br>
+                                    Email: FixKar@gmail.com
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                
+                <tr class="heading">
+                    <td>Payment Method</td>
+                    <td>Cash</td>
+                </tr>
+                
+                <tr class="details">
+                    <td>Cash</td>
+                    <td>1000</td>
+                </tr>
+                
+                <tr class="heading">
+                    <td>Service</td>
+                    <td>Price</td>
+                </tr>
+
+                <tr class="item">
+                    <td>General Charges</td>
+                    <td>Rs.800</td>
+                </tr>
+                <tr class="item">
+                    <td>Towing Charges</td>
+                    <td>Rs.500</td>
+                </tr>
+                <tr class="item">
+                    <td>Exchange Charges</td>
+                    <td>Rs.900</td>
+                </tr>
+                <tr class="total">
+                    <td><br>Total</td>
+                    <td><br>Rs.2200</td>
+                </tr>
+                <tr>
+                    <td><div class="alert">
+                        <p>Extra charges might be added based on your car issue and condition. Please kindly check our <a href="#">Terms</a> and <a href="#">Conditions policy.</a></p>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button-container">
+                            <button type="submit" id="success">Register</button>
+                            <button type="button" id="error">Cancel</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            var dt = new Date();
+            var date = dt.getDate()+"-"+dt.getMonth()+"-"+dt.getFullYear();
+            document.getElementById('date-time').innerHTML=date;
+            function exit(){
+                window.location.href="home.html";
+            }
+            $(document).on('click', '#success', function(e) {
+			swal(
+				'<span style="color:black; font-size:20px;">Service Registered Successfully</span>',
+				'<span style="color:black; font-size:18px; text-align: left; text-weight:bold;">Technician Details:<br>Name: Rajinikanth<br> Contact: 9994525550<br>Experince: 8 years</span>',
+				'success'
+			)
+		});
+        $(document).on('click', '#error', function(e) {
+			swal(
+				'Failed!',
+				'Your service request has been <b style="color:red;">cancelled.</b>',
+				'error'
+			).then(function(){
+            window.location.href="home.html";
+            })
+		});
+
+        </script>
+    </body>
+    </html> 

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+.back{
+    background: black;
+}
+.invoice-box{
+    max-width: 100%;
+    max-height: 100%;
+    background: black;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Roboto' , sans-serif;
+}
+
+.logo{
+    width: 150px;
+    height: auto;
+}
+
+h2{
+    color: #dd2026;
+    font-weight: bolder;
+}
+
+.invoice-box table{
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+}
+
+.invoice-box table td{
+    padding: 4px;
+    vertical-align: top;
+}
+
+.invoice-box table tr td:nth-child(2){
+    text-align: right;
+    padding-right: 50px;
+}
+
+
+
+.invoice-box table tr.information table td{
+    padding-bottom: 10px;
+}
+
+.invoice-box table tr.heading td{
+    background: #dd2026;
+    border-bottom: 1px solid #dd2026;
+    font-weight: bold
+}
+
+.invoice-box table tr.details td{
+    padding-bottom: 20px;
+}
+
+.invoice-box table tr.item td{
+    border-bottom: 1px solid #dd2026;
+    font-size: 15px;
+}
+
+.invoice-box table tr.item-last td{
+    border-bottom: 1px solid #dd2026;
+    font-size: 15px;
+}
+
+.invoice-box table tr.total td{
+    border-bottom: 1px solid #dd2026;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px){
+    .invoice-box table tr.top table td{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .invoice-box table tr.information table td{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+
+.button-container button{
+    font-size:large;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    color: white;
+    background: #dd2026;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: inset 0 0 0 0 #0d141f;
+    transition: ease-out 0.3s;
+    outline: none;
+    
+}
+
+.button-container button:hover{
+    box-shadow: inset 100px 0 0 0 white;
+    cursor: pointer;
+    color: #dd2026;
+    font-weight: bold;
+}
+
+.alert p{
+    font-size: 14px;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.alert a{
+    text-decoration: none;
+}
+
+.alert a:hover{
+    text-decoration: underline;
+}
